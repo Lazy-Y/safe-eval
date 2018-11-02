@@ -4,7 +4,6 @@ module.exports = function safeEval (code, context, opts) {
   var sandbox = {}
   var resultKey = 'SAFE_EVAL_' + Math.floor(Math.random() * 1000000)
   sandbox[resultKey] = {}
-    })();
   var clearContext = "(function(){\
       Function = undefined;\
       const keys = Object.getOwnPropertyNames(this).concat(['constructor']);\
